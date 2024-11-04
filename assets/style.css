@@ -20,11 +20,13 @@ body {
     flex-basis: calc(33% - 6rem);
 }
 
-.cartao__conteudo{
+.cartao__conteudo {
     background-color: var(--card-front-color);
     text-align: center;
    /* background-color: aquamarine; */
     height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
 
 }
 
@@ -54,6 +56,14 @@ body {
     color: var(--card-back-color);
     font-weight: 700;
 }
+
+.cartao:hover .cartao__conteudo {
+    transform: rotateY(180deg);
+}
+
+
+
+
 
 footer {
     background-color: black;
